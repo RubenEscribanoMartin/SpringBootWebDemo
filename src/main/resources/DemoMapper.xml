@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.springWeb.demo.data.DemoMapper">
+ 
+    <select id="getLanguageByUser" resultType="String">
+        SELECT USL_LANGUAGE FROM USER_LANGUAGE WHERE USL_USER = #{userName}
+    </select>
+ 
+    <select id="getMessageByLanguage" resultType="String">
+        SELECT MSG_DESCRIPTION FROM MESSAGES WHERE MSG_MESSAGE = "welcome" AND MSG_LANGUAGE = #{language}
+    </select>
+ 
+</mapper>
